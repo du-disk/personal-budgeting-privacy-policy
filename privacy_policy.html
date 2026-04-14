@@ -1,92 +1,170 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebijakan Privasi - Personal Budgeting</title>
+    <title>Privacy Policy | Personal Budgeting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1e40af;
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f8fafc;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .privacy-card {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            background: #ffffff;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
+
         h1 {
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
         }
+
+        .version-date {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 48px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+
         ul {
-            padding-left: 20px;
+            padding-left: 24px;
         }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .accent-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 32px 0;
+        }
+
+        .accent-box strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
         .footer {
-            margin-top: 30px;
             text-align: center;
-            font-size: 0.9em;
-            color: #7f8c8d;
+            margin-top: 48px;
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .privacy-card {
+                padding: 32px 20px;
+            }
+            h1 {
+                font-size: 1.875rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Kebijakan Privasi</h1>
-    <p><strong>Terakhir diperbarui: 14 April 2026</strong></p>
+<div class="privacy-card">
+    <h1>Privacy Policy</h1>
+    <span class="version-date">Effective Date: April 14, 2026</span>
 
-    <p>Terima kasih telah menggunakan aplikasi <strong>Personal Budgeting</strong>. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan membagikan informasi Anda saat menggunakan aplikasi kami ("Layanan").</p>
+    <p>Welcome to <strong>Personal Budgeting</strong>. We are committed to protecting your privacy and ensuring you have a secure experience when using our mobile application. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your personal data.</p>
 
-    <h2>1. Informasi yang Kami Kumpulkan</h2>
-    <p>Aplikasi ini mengumpulkan beberapa kategori data agar dapat berfungsi secara normal:</p>
+    <h2>1. Data Collection & Processing</h2>
+    <p>We collect and process various types of information to provide you with the best possible financial management experience:</p>
     <ul>
-        <li><strong>Informasi Pendaftaran dan Akun:</strong> Saat Anda mendaftar melalui Google Sign-In, kami menerima informasi dasar seperti nama, alamat email, dan foto profil Anda.</li>
-        <li><strong>Data Keuangan dan Transaksi:</strong> Data yang Anda masukkan (pemasukan, pengeluaran, saldo) disimpan di layanan cloud (Firebase/Firestore) agar Anda dapat mengakses sinkronisasi di berbagai perangkat Anda.</li>
-        <li><strong>Akses Mikrofon dan Audio (Speech-to-Text):</strong> Aplikasi dapat meminta izin akses ke mikrofon Anda untuk menggunakan fitur konversi suara ke teks. Data suara <strong>TIDAK KAMI REKAM atau SIMPAN</strong> di server kami, tetapi langsung dialihkan ke layanan pengenalan suara bawaan untuk diubah menjadi teks transaksi.</li>
-        <li><strong>Akses Kamera dan Galeri (Image Picker):</strong> Jika Anda mengunggah bukti transaksi berupa foto, kami memerlukan izin kamera/galeri. Foto diunggah menggunakan Firebase Storage dan hanya menjadi bagian dari data personal Anda.</li>
-        <li><strong>Autentikasi Biometrik:</strong> Kami menggunakan sensor biometrik (sidik jari atau Face ID) yang ada pada perangkat Anda untuk fitur keamanan masuk (local_auth). Data biometrik ini diproses sepenuhnya secara lokal di perangkat Anda dan <strong>tidak pernah kami kumpulkan atau kami simpan di server</strong>.</li>
+        <li><strong>Account Authentication:</strong> We utilize Google Sign-In for secure registration and authentication. This provides us with your name, email address, and profile picture.</li>
+        <li><strong>Financial Data:</strong> Any transactional data (income, expenses, and account balances) entered into the Service is stored securely via <strong>Firebase Firestore Cloud</strong> to facilitate cross-device synchronization and data persistence.</li>
+        <li><strong>Visual Documentation:</strong> With your explicit consent, we may access your device's camera and gallery to allow you to upload images of receipts or transaction documents. These assets are stored using <strong>Firebase Storage</strong>.</li>
     </ul>
 
-    <h2>2. Bagaimana Kami Menggunakan Informasi Anda</h2>
-    <p>Informasi yang terkumpul semata-mata digunakan untuk tujuan:</p>
+    <div class="accent-box">
+        <strong>Special Note on AI & Audio Data:</strong>
+        To facilitate voice-to-text recording, the Service requires access to your device's microphone. We utilize high-performance Artificial Intelligence (AI) to transcribe your speech into text in real-time. <strong>We do not record, store, or monitor your raw audio files</strong> on our servers. The audio data is processed transiently and only for the duration of the transcription.
+    </div>
+
+    <h2>2. Purpose of Processing</h2>
+    <p>Your data is processed based on the following legal and operational grounds:</p>
     <ul>
-        <li>Menyediakan, mengelola, dan memelihara aplikasi Personal Budgeting Anda.</li>
-        <li>Menyimpan dan mengamankan riwayat keuangan Anda secara sinkron berbasis Cloud.</li>
-        <li>Mengenali perintah suara secara real-time untuk mempercepat pencatatan pengeluaran (sementara dan langsung teks).</li>
-        <li>Melindungi keamanan akun dan transaksi Anda.</li>
+        <li>To provide core financial tracking functionality and cross-device synchronization.</li>
+        <li>To enable innovative voice-recording features leveraging AI technologies.</li>
+        <li>To enhance application stability and perform diagnostics through crash reporting.</li>
+        <li>To ensure the data integrity and security of your personal financial records.</li>
     </ul>
 
-    <h2>3. Layanan Pihak Ketiga</h2>
-    <p>Aplikasi ini dapat menggunakan layanan dari pihak ketiga berikut yang memiliki Kebijakan Privasi mereka sendiri mengenai penanganan data Anda:</p>
+    <h2>3. Security Standards</h2>
+    <p>We implement industry-standard security measures, including <strong>Advanced Encryption Standard (AES)</strong> for local data where applicable and secure SSL/TLS protocols for all data transmitted to our cloud servers. For enhanced security, we support <strong>Biometric Authentication</strong> (Face ID/Fingerprint). All biometric processing occurs exclusively on the hardware-level of your device and is never transmitted to us or any third party.</p>
+
+    <h2>4. Third-Party Integrations</h2>
+    <p>We integrate with trusted third-party services to deliver professional-grade functionality:</p>
     <ul>
-        <li>Google Play Services</li>
-        <li>Google Analytics untuk Firebase</li>
-        <li>Firebase Authentication & Firestore</li>
+        <li><strong>Google Play Services:</strong> Fundamental app infrastructure.</li>
+        <li><strong>Firebase (Google LLC):</strong> Cloud storage, authentication, and performance monitoring.</li>
+        <li><strong>Speech Recognition & AI APIs:</strong> Real-time secure transcription services.</li>
     </ul>
-    <p>Layanan pihak ketiga ini digunakan untuk fungsi autentikasi, database cloud backend, dan analitik stabilitas aplikasi (crash/error record).</p>
 
-    <h2>4. Menghapus Data Anda</h2>
-    <p>Anda memiliki kontrol penuh atas akun dan data keuangan Anda. Jika Anda ingin menghapus seluruh data Anda secara permanen dari server Firebase kami, Anda dapat menghapus akun langsung dari menu Pengaturan di dalam Aplikasi atau menghubungi tim dukungan kami.</p>
+    <h2>5. Data Retention & Deletion</h2>
+    <p>We retain your data only for as long as you maintain an active account with us. You have the total "Right to be Forgotten." You may delete your account and all associated data directly within the "Settings" menu of the application, which will trigger a permanent deletion across all our cloud databases.</p>
 
-    <h2>5. Hubungi Kami</h2>
-    <p>Jika Anda memiliki pertanyaan lebih lanjut atau saran mengenai Kebijakan Privasi ini, jangan ragu untuk menghubungi kami melalui:</p>
+    <h2>6. Contact & Support</h2>
+    <p>For any inquiries, requests for clarification, or support regarding your privacy rights, please contact our Data Protection Office at:</p>
     <ul>
-        <li>Email: <em>brodud.dev@gmail.com</em></li>
+        <li>Developer: <strong>Brodud Studio</strong></li>
+        <li>Email: <a href="mailto:brodud.dev@gmail.com">brodud.dev@gmail.com</a></li>
     </ul>
 </div>
 
 <div class="footer">
-    <p>&copy; 2026 Personal Budgeting App. Hak Cipta Dilindungi.</p>
+    &copy; 2026 Personal Budgeting. All Rights Reserved.
 </div>
 
 </body>
